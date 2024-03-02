@@ -18,7 +18,7 @@ Each of the above folders includes the following zip files:
 The first step is to navigate to the desired dataset folder and unzip the corresponding _EdleList_ and _InferredCoordinates_ zip files. Due to github file size restrictions you may have multiple zip files. In such cases use an appropriate software (such as [7zip](https://www.7-zip.org/)) to extract the first zip file (i.e., EdgeList.zip.001 and InferredCoordinates.aip.001, respectively).   
 
 ### 2. Procrustean Rotations
-To apply Procrustean Rotations for a selected dataset, first you need to apply step 1 above and **unzip** the *InferredCoordinates.zip* file of the dataset. Then, to apply **Procrustean Rotations** on the angular coordinates of the nodes you can use the __angle_rotation.py__ script as follows:  
+To apply Procrustean rotations for a selected dataset, first you need to apply step 1 above and **unzip** the *InferredCoordinates.zip* file of the dataset. Then, to apply **Procrustean rotations** on the angular coordinates of the nodes you can use the __angle_rotation.py__ script as follows:  
 ```bash
 $ python angle_rotation.py -s .\DATA\USAir\InferredCoordinates\ -o .\DATA\USAir\InferredCoordinatesRotated
 ```
@@ -44,9 +44,9 @@ $ python generate_trajectories.py -s .\DATA\USAir\InferredCoordinatesRotated\ -o
 To compute the trajectory properties considered in the paper use the matlab code under the corresponding folder (**matlab_code**). The folder includes a README file and inline comments on how to use the code. In short, the folder contains the following matlab scripts:
 * **mbm.m** - The implementation of the fractional Brownian notion (fBm) model.
 * **popularity_sim.m** - Reads the radial or expected degree trajectories and creates figures similar to Fig.5 in the above paper (arXiv version).
-* **similarity_sim.m** - Reads the angular trajectories and creates figures similar to Fig. 5 in the above paper. It also creates angular histograms as in Fig. 2(f) in the above paper.
-* **popularity_predictions.m** - Reads the radial or expected degree trajectories and performs predictions using simple heuristics, as in Figs. 38-42(a),(b) in the above paper.
-* **similarity_predictions.m** - Reads the angular trajectories and performs predictions using simple heuristics, as in Figs. 38-42(c) in the above paper.
+* **similarity_sim.m** - Reads the angular trajectories and creates figures similar to Fig. 5 in the above paper. It also creates angular histograms as in Fig. 2(f) in the above paper (arXiv version).
+* **popularity_predictions.m** - Reads the radial or expected degree trajectories and performs predictions using simple heuristics, as in Figs. 38-42(a),(b) in the above paper (arXiv version).
+* **similarity_predictions.m** - Reads the angular trajectories and performs predictions using simple heuristics, as in Figs. 38-42(c) in the above paper (arXiv version).
 
 ## Datasets Video animation
 The folder **Videos** includes sample videos, one for each dataset, depicting the motion (angular and radial coordinates) of two sample nodes per dataset.
