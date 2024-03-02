@@ -1,4 +1,4 @@
-# Fundamental dynamics of popularity-similarity trajectories in real networks repository
+# Fundamental dynamics of popularity-similarity trajectories in real networks repository 
 The main purpose of this repository is to provide access to the paper datasets, preprocessing scripts, implementation code and animation videos of the real networks used in the paper. The arXiv version of the paper is available [here](https://arxiv.org/abs/2309.01675). The paper is part of the project *Time-Varying Hyperbolic Geometric Graphs* [TV-HGGs](https://netsysci.cut.ac.cy/projects/tv-hggs/).
 
 # General Instructions
@@ -15,35 +15,35 @@ Each of the above folders includes the following zip files:
 ## Dataset preprocessing step
 
 ### 1. Unzipping a dataset
-The first step is to navigate to the desired dataset folder and unzip the corresponding _EdleList_ and _InferredCoordinates_ zip files. Due to github file size restrictions you make have multiple zip files. In such cases use an appropriate software (such as [7zip](https://www.7-zip.org/)) to extract the first zip file (i.e., EdgeList.zip.001 and InferredCoordinates.aip.001, respectively).   
+The first step is to navigate to the desired dataset folder and unzip the corresponding _EdleList_ and _InferredCoordinates_ zip files. Due to github file size restrictions you may have multiple zip files. In such cases use an appropriate software (such as [7zip](https://www.7-zip.org/)) to extract the first zip file (i.e., EdgeList.zip.001 and InferredCoordinates.aip.001, respectively).   
 
-### 2. Procrustean Rotation
-To apply the Procrustean Rotation for a selected dataset, first you need to apply step 1 above and **unzip** the *InferredCoordinates.zip* file of the dataset. Then, to apply the **Procrustean Rotation** on the angular coordinates of the nodes you can use the __angle_rotation.py__ script as follow:  
+### 2. Procrustean Rotations
+To apply Procrustean Rotations for a selected dataset, first you need to apply step 1 above and **unzip** the *InferredCoordinates.zip* file of the dataset. Then, to apply **Procrustean Rotations** on the angular coordinates of the nodes you can use the __angle_rotation.py__ script as follows:  
 ```bash
 $ python angle_rotation.py -s .\DATA\USAir\InferredCoordinates\ -o .\DATA\USAir\InferredCoordinatesRotated
 ```
-The above code snippet will generate a new folder under *.\DATA\USAir\InferredCoordinatesRotated* populated with snapshot files that contains the corresponding rotated angular coordinates of the USAir network.
+The above code snippet will generate a new folder under *.\DATA\USAir\InferredCoordinatesRotated* populated with snapshot files that contain the corresponding rotated angular coordinates of the USAir network.
 
 ### 3. Trajectory Generation
-To generate the different type of node trajectories for each dataset you can use the __generate_trajectories.py__ script as follow:
+To generate the different types of node trajectories for each dataset you can use the __generate_trajectories.py__ script as follows:
 ```bash
 $ python generate_trajectories.py -s .\DATA\USAir\InferredCoordinatesRotated\ -o .\DATA\USAir\angularTrajectories
 ```
-The above code snippet will generate a new folder under *.\DATA\USAir\angularTrajectories* populated with node files that contains the corresponding angular trajectory of each node in the USAir network
+The above code snippet will generate a new folder under *.\DATA\USAir\angularTrajectories* populated with node files that contain the corresponding angular trajectory of each node in the USAir network
 
 To generate the radial trajectories use the following code snippet:
 ```bash
 $ python generate_trajectories.py -s .\DATA\USAir\InferredCoordinatesRotated\ -o .\DATA\USAir\radialTrajectories --radial
 ```
-Finally to generated the trajectories of the nodes expected degree use the following code snippet:
+Finally to generate the expected degree trajectories use the following code snippet:
 ```bash
 $ python generate_trajectories.py -s .\DATA\USAir\InferredCoordinatesRotated\ -o .\DATA\USAir\kappaTrajectories --kappa
 ```
 
 ### 4. Trajectory properties
-To computes the trajectory properties considered in the paper use the matlab code under the corresponding folder (**matlab_code**). The folder includes a README file and inline comments on how to use the code. In short, the folder contains the following matlab scripts:
+To compute the trajectory properties considered in the paper use the matlab code under the corresponding folder (**matlab_code**). The folder includes a README file and inline comments on how to use the code. In short, the folder contains the following matlab scripts:
 * **mbm.m** - The implementation of the fractional Brownian notion (fBm) model.
-* **popularity_sim.m** - Reads the radial or expected degree trajectories and creates figures similar to Fig.5 in the above paper.
+* **popularity_sim.m** - Reads the radial or expected degree trajectories and creates figures similar to Fig.5 in the above paper (arXiv version).
 * **similarity_sim.m** - Reads the angular trajectories and creates figures similar to Fig. 5 in the above paper. It also creates angular histograms as in Fig. 2(f) in the above paper.
 * **popularity_predictions.m** - Reads the radial or expected degree trajectories and performs predictions using simple heuristics, as in Figs. 38-42(a),(b) in the above paper.
 * **similarity_predictions.m** - Reads the angular trajectories and performs predictions using simple heuristics, as in Figs. 38-42(c) in the above paper.
