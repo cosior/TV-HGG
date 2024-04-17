@@ -15,7 +15,7 @@ Each of the above folders includes the following zip files:
 ## Dataset preprocessing step
 
 ### 1. Unzipping a dataset
-The first step is to navigate to the desired dataset folder and unzip the corresponding _EdleList_ and _InferredCoordinates_ zip files. Due to github file size restrictions you may have multiple zip files. In such cases use an appropriate software (such as [7zip](https://www.7-zip.org/)) to extract the first zip file (i.e., EdgeList.zip.001 and InferredCoordinates.aip.001, respectively).   
+The first step is to navigate to the desired dataset folder and unzip the corresponding _EdgeList_ and _InferredCoordinates_ zip files. Due to github file size restrictions you may have multiple zip files. In such cases use an appropriate software (such as [7zip](https://www.7-zip.org/)) to extract the first zip file (i.e., EdgeList.zip.001 and InferredCoordinates.zip.001, respectively).   
 
 ### 2. Procrustean Rotations
 To apply Procrustean rotations for a selected dataset, first you need to apply step 1 above and **unzip** the *InferredCoordinates.zip* file of the dataset. Then, to apply **Procrustean rotations** on the angular coordinates of the nodes you can use the __angle_rotation.py__ script as follows:  
@@ -29,13 +29,13 @@ To generate the different types of node trajectories for each dataset you can us
 ```bash
 $ python generate_trajectories.py -s .\DATA\USAir\InferredCoordinatesRotated\ -o .\DATA\USAir\angularTrajectories
 ```
-The above code snippet will generate a new folder under *.\DATA\USAir\angularTrajectories* populated with node files that contain the corresponding angular trajectory of each node in the USAir network
+The above code snippet will generate a new folder under *.\DATA\USAir\angularTrajectories* populated with node files that contain the corresponding angular trajectory of each node in the USAir network.
 
 To generate the radial trajectories use the following code snippet:
 ```bash
 $ python generate_trajectories.py -s .\DATA\USAir\InferredCoordinatesRotated\ -o .\DATA\USAir\radialTrajectories --radial
 ```
-Finally to generate the expected degree trajectories use the following code snippet:
+Finally, to generate the expected degree trajectories use the following code snippet:
 ```bash
 $ python generate_trajectories.py -s .\DATA\USAir\InferredCoordinatesRotated\ -o .\DATA\USAir\kappaTrajectories --kappa
 ```
