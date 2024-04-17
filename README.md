@@ -49,4 +49,4 @@ To compute the trajectory properties considered in the paper use the matlab code
 * **similarity_predictions.m** - Reads the angular trajectories and performs predictions using simple heuristics, as in Figs. 38-42(c) in the above paper (arXiv version).
 
 ## Datasets Video animation
-The folder **Videos** includes sample videos, one for each dataset, depicting the motion (angular and radial coordinates) of two sample nodes per dataset.
+The folder **Videos** includes sample videos, one for each dataset, depicting the motion of two sample nodes per dataset.
