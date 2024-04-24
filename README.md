@@ -57,7 +57,7 @@ The folder **Videos** includes sample videos, one for each dataset, depicting th
 
 _Fundamental dynamics of popularity-similarity trajectories in real networks_<br>
 Evangelos S. Papaefthymiou,
-[Costas Iordanou](https://scholar.google.com/citations?user=Nxo-Yp8AAAAJ&hl=en) and
-[Fragkiskos Papadopoulos](https://scholar.google.com/citations?user=ib8q0gUAAAAJ&hl=en)<br>
+[Costas Iordanou](https://cosior.github.io/) and
+[Fragkiskos Papadopoulos](https://netsysci.cut.ac.cy/f.papadopoulos/)<br>
 arXiv:2309.01675, September 2023<br>
 [arXiv](https://doi.org/10.48550/arXiv.2309.01675)
