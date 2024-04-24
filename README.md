@@ -50,3 +50,13 @@ To compute the trajectory properties considered in the paper use the matlab code
 
 ## Datasets Video animation
 The folder **Videos** includes sample videos, one for each dataset, depicting the motion of two sample nodes per dataset.
+
+## Publications
+
+**Please cite:**
+
+_Fundamental dynamics of popularity-similarity trajectories in real networks_<br>
+Evangelos S. Papaefthymiou,
+[Costas Iordanou](https://scholar.google.com/citations?user=Nxo-Yp8AAAAJ&hl=en) and
+[Fragkiskos Papadopoulos](https://scholar.google.com/citations?user=ib8q0gUAAAAJ&hl=en)<br>
+[arXiv](https://doi.org/10.48550/arXiv.2309.01675)
