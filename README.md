@@ -1,5 +1,5 @@
 # Fundamental dynamics of popularity-similarity trajectories in real networks repository 
-The purpose of this repository is to provide access to the paper's datasets, preprocessing scripts, implementation code, and animation videos of the real networks used. The arXiv version of the paper is available [here](https://arxiv.org/abs/2309.01675). The paper is part of the project *Time-Varying Hyperbolic Geometric Graphs* [TV-HGGs](https://netsysci.cut.ac.cy/projects/tv-hggs/).
+This repository provides access to the paper's datasets, preprocessing scripts, implementation code, and animation videos of the real networks used. The arXiv version of the paper is available [here](https://arxiv.org/abs/2309.01675). The paper is part of the project *Time-Varying Hyperbolic Geometric Graphs* [TV-HGGs](https://netsysci.cut.ac.cy/projects/tv-hggs/).
 
 # General Instructions
 The repository includes the following datasets under the folder __.\DATA__
@@ -45,8 +45,8 @@ To compute the trajectory properties considered in the paper use the matlab code
 * **mbm.m** - The implementation of the fractional Brownian motion (fBm) model.
 * **popularity_sim.m** - Reads the radial or expected degree trajectories and creates figures similar to Fig. 1 in the paper.
 * **similarity_sim.m** - Reads the angular trajectories and creates figures similar to Fig. 2 in the paper.
-* **popularity_predictions.m** - Reads the radial or expected degree trajectories and performs predictions using simple heuristics, as in Figs. 39-43(a),(b) in the paper (arXiv version v2).
-* **similarity_predictions.m** - Reads the angular trajectories and performs predictions using simple heuristics, as in Figs. 39-43(c) in the paper (arXiv version v2).
+* **popularity_predictions.m** - Reads the radial or expected degree trajectories and performs predictions using simple heuristics, as in Figs. 39-43(a),(b) in the paper (arXiv v2).
+* **similarity_predictions.m** - Reads the angular trajectories and performs predictions using simple heuristics, as in Figs. 39-43(c) in the paper (arXiv v2).
 
 ## Datasets Video animation
 The folder **Videos** includes sample videos, one for each dataset, depicting the motion of two sample nodes per dataset.
